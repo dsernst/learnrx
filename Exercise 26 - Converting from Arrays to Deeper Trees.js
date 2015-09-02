@@ -109,7 +109,7 @@ function exercise() {
             return bookmark.videoId === video.id;
           }).map(function (bookmark) {
             return bookmark.time;
-          })[0],
+          }).reduce(function (){}),
           boxart: boxarts.filter(function (boxart) {
             return boxart.videoId === video.id;
           }).reduce(function (memo, boxart) {
