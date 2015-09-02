@@ -1,6 +1,10 @@
-Array.prototype.concatMap = function(projectionFunctionThatReturnsArray) {
+// Exercise 13: Implement concatMap()
+
+// Nearly every time we flatten a tree we chain map() and concatAll(). Sometimes, if we're dealing with a tree several levels deep, we'll repeat this combination many times in our code. To save on typing, let's create a concatMap function that's just a map operation, followed by a concatAll.
+
+Array.prototype.concatMap = function (projectionFunctionThatReturnsArray) {
   return this.
-    map(function(item) {
+    map(function (item) {
       // ------------   INSERT CODE HERE!  ----------------------------
       // Apply the projection function to each item. The projection
       // function will return an new child array. This will create a
@@ -22,5 +26,7 @@ Array.prototype.concatMap = function(projectionFunctionThatReturnsArray) {
 
   return JSON.stringify(allWords) === '["cero","rien","zero","uno","un","one","dos","deux","two"]';
 */
+
+// Now, instead of using map().concatAll() to flatten a tree, we can just use concatMap helper function.
 
 module.exports = Array.prototype.concatMap;
